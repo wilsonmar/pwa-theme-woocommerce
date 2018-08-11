@@ -18,6 +18,8 @@ heroku login
 #Initialize a git repository in a new or existing directory
 
 heroku git:remote -a pwa-react-node
+	# set git remote heroku to https://git.heroku.com/pwa-react-node.git
+
 # Deploy your application
 # Commit your code to the repository and deploy it to Heroku using Git.
 
@@ -29,8 +31,19 @@ git push heroku master
 
 heroku git:remote -a pwa-react-node
 
+git remote -v
+   # heroku	https://git.heroku.com/pwa-react-node.git (fetch)
+   # heroku	https://git.heroku.com/pwa-react-node.git (push)
+   # origin	git@github.com:wilsonmar/pwa-theme-woocommerce (fetch)
+   # origin	git@github.com:wilsonmar/pwa-theme-woocommerce (push)
+
+open https://pwa-react-node.herokuapp.com/
+
+exit
 
 #### GCP
+
+# See https://medium.com/google-cloud/deploying-a-node-js-app-on-google-cloud-8419de45e5dc
 
 # https://cloud.google.com/nodejs/
 npm install --save @google-cloud/storage 
@@ -39,6 +52,10 @@ npm install --save @google-cloud/storage
    # Assigned: starting-account-2sn1bf9lqx89.
    # Downlaod private key: jetbloom-pwareact-node-9c6c833f9aec.json in ~
 
+# Create app.yaml based on https://cloud.google.com/appengine/docs/flexible/nodejs/configuring-your-app-with-app-yaml
+
 # Sample: https://github.com/googleapis/nodejs-storage/blob/fb6a7fd779061da9d885b7ac89992acde1191b54/samples/files.js
 
 # Needs app.yml for Google
+
+https://cloud.google.com/shell/docs/features#web_preview
